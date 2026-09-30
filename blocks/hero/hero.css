@@ -5,21 +5,48 @@
 
 .hero {
   position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  min-height: 480px;
   padding: 40px 24px;
-  min-height: 300px;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: var(--text-color);
+  color: var(--background-color);
 }
 
 .hero h1 {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--background-color);
+  color: inherit;
 }
 
-.hero picture {
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-media,
+.hero-media picture {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   inset: 0;
+}
+
+.hero-media::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(0deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 0%) 75%);
+  content: '';
+}
+
+.hero-media picture {
   object-fit: cover;
   box-sizing: border-box;
 }

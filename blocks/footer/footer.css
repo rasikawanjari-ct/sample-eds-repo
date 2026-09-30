@@ -1,20 +1,156 @@
 footer {
-  background-color: var(--light-color);
+  background-color: #252a2d;
+  color: #fff;
   font-size: var(--body-font-size-xs);
 }
 
 footer .footer > div {
   margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  max-width: 1320px;
+  padding: 32px 24px;
 }
 
 footer .footer p {
   margin: 0;
 }
 
+footer .footer a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  text-decoration: underline;
+}
+
+footer .footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+footer .footer .section {
+  margin: 0;
+}
+
+/* Social icon boxes */
+footer .footer .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  color: #252a2d;
+  flex-shrink: 0;
+}
+
+footer .footer .icon img {
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Columns block ─────────────────────────────── */
+footer .footer .columns > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+footer .footer .columns > div > div {
+  padding: 0;
+}
+
+/* Col 1: WKND wordmark */
+footer .footer .columns > div > div:first-child {
+  font-family: var(--heading-font-family);
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+footer .footer .columns > div > div:first-child img {
+  display: block;
+  width: 140px;
+  height: auto;
+}
+
+/* Col 2: horizontal nav links */
+footer .footer .columns > div > div:nth-child(2) ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  margin: 0;
+}
+
+footer .footer .columns > div > div:nth-child(2) ul li {
+  font-size: var(--body-font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Legal / copyright row ─────────────────────── */
+footer .footer .columns-container ~ .default-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+  border-top: 1px solid rgb(255 255 255 / 25%);
+  padding-top: 20px;
+  color: #9ca3af;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Col 3: Follow Us + social icons */
+footer .footer .columns > div > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+footer .footer .columns > div > div:last-child p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+footer .footer .columns > div > div:last-child strong {
+  font-size: var(--body-font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ── Desktop ─────────────────────────────────────── */
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 40px 32px 32px;
+  }
+
+  footer .footer .columns > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+
+  footer .footer .columns > div > div:first-child {
+    flex: 0 0 200px;
+  }
+
+  footer .footer .columns > div > div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer .footer .columns > div > div:last-child {
+    flex: 0 0 auto;
   }
 }

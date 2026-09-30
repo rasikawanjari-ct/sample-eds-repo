@@ -8,8 +8,14 @@
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
+  border: 1px solid #e8e8e8;
   background-color: var(--background-color);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.cards > ul > li:hover {
+  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
+  transform: translateY(-2px);
 }
 
 .cards .cards-card-body {
