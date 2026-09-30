@@ -13,7 +13,7 @@ export default function decorate(block) {
     ul.append(li);
   });
   linksCell.replaceChildren(ul);
-  linksCell.className = 'quicknav-links';
+  linksCell.className = 'anchor-nav-links';
 
-  if (ctaCell) ctaCell.className = 'quicknav-cta';
+  if (ctaCell) ctaCell.className = 'anchor-nav-cta';
 }

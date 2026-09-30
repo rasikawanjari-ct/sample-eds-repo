@@ -8,8 +8,8 @@ export default function decorate(block) {
   const row = block.firstElementChild;
   const [imageCell, contentCell] = row.children;
 
-  imageCell.className = 'promo-image';
-  contentCell.className = 'promo-content';
+  imageCell.className = 'media-feature-image';
+  contentCell.className = 'media-feature-content';
 
   const img = imageCell.querySelector('img');
   if (img) {
@@ -23,7 +23,7 @@ export default function decorate(block) {
   const buttons = contentCell.querySelectorAll('p.button-wrapper');
   if (buttons.length) {
     const ctaWrapper = document.createElement('div');
-    ctaWrapper.className = 'promo-cta';
+    ctaWrapper.className = 'media-feature-cta';
     ctaWrapper.append(...buttons);
     contentCell.append(ctaWrapper);
   }

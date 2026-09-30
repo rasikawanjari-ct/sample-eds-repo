@@ -1,4 +1,4 @@
-.quicknav {
+.anchor-nav {
   position: sticky;
   top: var(--nav-height);
   z-index: 1;
@@ -6,14 +6,14 @@
   border-bottom: 1px solid var(--light-color);
 }
 
-.quicknav > div {
+.anchor-nav > div {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 16px 0;
 }
 
-.quicknav-links ul {
+.anchor-nav-links ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 24px;
@@ -24,20 +24,20 @@
   font-weight: 500;
 }
 
-.quicknav-links a:any-link {
+.anchor-nav-links a:any-link {
   color: var(--text-color);
 }
 
-.quicknav-cta {
+.anchor-nav-cta {
   flex: none;
 }
 
-.quicknav-cta .button-wrapper {
+.anchor-nav-cta .button-wrapper {
   margin: 0;
 }
 
 @media (width >= 900px) {
-  .quicknav > div {
+  .anchor-nav > div {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
