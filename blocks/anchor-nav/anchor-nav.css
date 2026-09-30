@@ -3,7 +3,6 @@
   top: var(--nav-height);
   z-index: 1;
   background-color: var(--background-color);
-  border-bottom: 1px solid var(--light-color);
 }
 
 .anchor-nav > div {
@@ -16,16 +15,16 @@
 .anchor-nav-links ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 24px;
+  gap: 8px 20px;
   list-style: none;
   margin: 0;
   padding: 0;
   font-size: var(--body-font-size-s);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .anchor-nav-links a:any-link {
-  color: var(--text-color);
+  color: var(--link-color);
 }
 
 .anchor-nav-cta {
@@ -34,6 +33,25 @@
 
 .anchor-nav-cta .button-wrapper {
   margin: 0;
+}
+
+.anchor-nav-cta .button {
+  border-radius: 8px;
+  padding: 0.375em 0.75em;
+  font-weight: 400;
+}
+
+.anchor-nav-cta .button.primary {
+  border-color: var(--link-color);
+  background-color: var(--link-color);
+  color: var(--background-color);
+}
+
+.anchor-nav-cta .button.primary:hover,
+.anchor-nav-cta .button.primary:focus-visible {
+  border-color: var(--link-hover-color);
+  background-color: var(--link-hover-color);
+  color: var(--background-color);
 }
 
 @media (width >= 900px) {
