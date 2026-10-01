@@ -4,11 +4,24 @@
   padding: 0;
 }
 
+/*
+ * position: sticky can't work here on its own: its containing block is this
+ * block's own (short) section, so it would un-stick the moment that section
+ * scrolls past, instead of staying pinned for the rest of the page like the
+ * reference site. anchor-nav.js toggles this modifier class via scroll
+ * position instead (matching the reference's own "pinned" behavior) and
+ * sizes anchor-nav-placeholder to hold the block's layout space while fixed.
+ */
 .anchor-nav {
-  position: sticky;
-  top: var(--nav-height);
-  z-index: 1;
   background-color: var(--background-color);
+}
+
+.anchor-nav.anchor-nav-pinned {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .anchor-nav > div {
@@ -90,6 +103,10 @@
 }
 
 @media (width >= 900px) {
+  .anchor-nav.anchor-nav-pinned {
+    top: 0;
+  }
+
   .anchor-nav > div {
     flex-direction: row;
     align-items: center;

@@ -31,6 +31,7 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  border-radius: 24px 24px 0 0;
 }
 
 .media-feature-content {
@@ -93,6 +94,7 @@
   .media-feature-image img {
     height: 100%;
     aspect-ratio: unset;
+    border-radius: 0 24px 24px 0;
   }
 
   .media-feature-content {
