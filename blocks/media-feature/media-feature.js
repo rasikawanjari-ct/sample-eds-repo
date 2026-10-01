@@ -70,6 +70,11 @@ export default function decorate(block) {
   const row = block.firstElementChild;
   const [imageCell, contentCell] = row.children;
 
+  // image and content sit inside this single wrapper, which is what gets
+  // clipped to rounded corners - keeps the clip box and the content box
+  // identical on every edge, so no corner can render differently from another
+  row.className = 'media-feature-inner';
+
   imageCell.className = 'media-feature-image';
   contentCell.className = 'media-feature-content';
 

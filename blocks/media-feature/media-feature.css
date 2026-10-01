@@ -5,17 +5,23 @@
 }
 
 .media-feature {
-  position: relative;
-  overflow: hidden;
   margin: 0 24px;
-  border-radius: 24px;
   background-color: var(--text-color);
   color: var(--background-color);
 }
 
-.media-feature > div {
+/*
+ * image and content both live inside this single wrapper, and it's the one
+ * clipped to rounded corners - keeping the clip box and the content box
+ * identical means every corner uses the exact same boundary, so none of
+ * them can render differently from the others.
+ */
+.media-feature-inner {
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
 }
 
 .media-feature-image {
@@ -75,7 +81,7 @@
     margin: 0 32px;
   }
 
-  .media-feature > div {
+  .media-feature-inner {
     flex-direction: row;
     align-items: stretch;
     height: 460px;
