@@ -79,7 +79,7 @@
 
   .media-feature-image {
     order: 1;
-    flex: 0 0 55%;
+    flex: 1 1 55%;
   }
 
   .media-feature-image img {
@@ -88,12 +88,11 @@
   }
 
   .media-feature-content {
-    flex: 1;
+    flex: 0 1 480px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 48px;
-    max-width: 480px;
   }
 }
 
