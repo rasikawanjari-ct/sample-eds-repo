@@ -1,3 +1,9 @@
+/* let the bar's background span the full section width, like the site header */
+.anchor-nav-container .anchor-nav-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
 .anchor-nav {
   position: sticky;
   top: var(--nav-height);
@@ -9,7 +15,9 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 16px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
 }
 
 .anchor-nav-links ul {
@@ -86,5 +94,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 16px 32px;
   }
 }

@@ -1,6 +1,13 @@
+/* let the card use the full section width instead of the default 1200px cap */
+.media-feature-container .media-feature-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
 .media-feature {
   position: relative;
   overflow: hidden;
+  margin: 0 24px;
   border-radius: 24px;
   background-color: var(--text-color);
   color: var(--background-color);
@@ -60,6 +67,10 @@
 }
 
 @media (width >= 900px) {
+  .media-feature {
+    margin: 0 32px;
+  }
+
   .media-feature > div {
     flex-direction: row;
     align-items: stretch;
