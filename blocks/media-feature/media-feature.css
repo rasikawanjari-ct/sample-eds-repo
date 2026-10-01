@@ -23,6 +23,10 @@
   line-height: 0;
 }
 
+.media-feature-image picture {
+  display: block;
+}
+
 .media-feature-image img {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -74,12 +78,16 @@
   .media-feature > div {
     flex-direction: row;
     align-items: stretch;
-    min-height: 460px;
+    height: 460px;
   }
 
   .media-feature-image {
     order: 1;
     flex: 1 1 55%;
+  }
+
+  .media-feature-image picture {
+    height: 100%;
   }
 
   .media-feature-image img {
